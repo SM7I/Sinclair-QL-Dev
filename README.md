@@ -13,3 +13,6 @@ Syntax is shown if you run the dot command without switches.
 | | | | |
 | **NXTPQL** | | | |
 | NXTPQL | Utility to query NXTP server and set RTC accordingly | Using the NXTP protocol originally developed for ZX Spectrum Next time synchronisation | 2025 |
+| | | |
+| **RAMTOP** | | | |
+| RAMTOP | Small utility to find out the maximum useable amount of RAM in any QL | 2023 |
