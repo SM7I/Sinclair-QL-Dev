@@ -16,3 +16,9 @@ Syntax is shown if you run the dot command without switches.
 | | | |
 | **RAMTOP** | | | |
 | RAMTOP | Show maximum useable amount of RAM |Small utility to find out the maximum useable amount of RAM in *any* QL | 2023 |
+| | | |
+| **QLRESET** | | | |
+| QLRESET | Resets QL |Small utility to soft reset QL. Useful if you´re using f.ex. HOT*REXT to map keyboard shortcuts| 2023 |
+| | | |
+| **QLHEADER** | | | |
+| QLHEADER | XTcc header recreator | Linux utility to recreate the XTcc header of a QL binary. XTcc headers are typically lost when handling QL binaries on a Windows PC, thus won´t run on QL. To be able to run them again you can run this utility on your Linux to recreate the header before transferring the binary to QL |2022 |
