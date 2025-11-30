@@ -3,7 +3,10 @@ Here you´ll find my own developments and contributions for the powerful Sinclai
 Syntax is shown (not all programs) if you run the program without switches.
 
 <li>NXTP Client QEmulator
-<li>NXTP Client QLion and WIZnet based Ethernet expansion card for BBQL 
+<li>NXTP Client QLion and WIZnet based Ethernet expansion card for BBQL
+<li>RAMTOP
+<li>QLRESET
+<li>QLHEADER
 <p><p>
   
 | Filename  | Description | Additional information | Year |
