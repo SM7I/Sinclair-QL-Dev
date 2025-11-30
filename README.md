@@ -1,6 +1,6 @@
 # Sinclair-QL-Dev
 Here you´ll find my own developments and contributions for the powerful Sinclair QL platform. These are zipped binaries (to preserve the XTcc field) that you can download and unzip in QDOS.
-Syntax is shown if you run the dot command without switches.
+Syntax is shown (not all programs) if you run the program without switches.
 
 <li>NXTP Client QEmulator
 <li>NXTP Client QLion and WIZnet based Ethernet expansion card for BBQL 
