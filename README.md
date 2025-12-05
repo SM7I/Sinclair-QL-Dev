@@ -24,4 +24,4 @@ Syntax is shown (not all programs) if you run the program without switches.
 | QLRESET | Resets QL |Small utility to soft reset QL. Useful if you´re using f.ex. HOT*REXT to map keyboard shortcuts| 2023 |
 | | | |
 | **QLHEADER** | | | |
-| QLHEADER | XTcc header recreator | Linux utility to recreate the XTcc header of a QL binary. XTcc headers are typically lost when handling QL binaries on a Windows PC, thus won´t run on QL. To be able to run them again you can run this utility on your Linux to recreate the header before transferring the binary to QL |2022 |
+| QLHEADER | XTcc header recreator | Linux utility to recreate the XTcc header of a QL binary. The XTcc field (header) are typically lost when handling QL binaries on a Windows PC, thus won´t run on QL. To be able to run them again you can run this utility on your Linux to recreate the field before transferring the binary to QL |2022 |
