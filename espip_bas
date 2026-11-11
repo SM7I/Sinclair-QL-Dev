@@ -1,0 +1,85 @@
+100 REMark espip - show ESP8266 IP info (c)2026 SM7I Projects
+110 REMark needs Toolkit II, Minerva or SMSQ for LOCAL
+120 dev$='ESP1'
+140 BAUD 115200
+150 OPEN #3,dev$
+160 CLS
+190 ok=0
+200 FOR i=1 TO 3
+210   r$=ESPCMD$('AT',50)
+220   IF 'OK' INSTR r$ THEN
+230     ok=1
+240     EXIT i
+250   END IF
+260 END FOR i
+270 IF NOT ok THEN
+280   PRINT 'No answer from ESP8266 on ';dev$
+290   CLOSE #3
+300   STOP
+310 END IF
+320 r$=ESPCMD$('ATE0',50)
+370 REMark --- IP, gateway, netmask ---
+380 r$=ESPCMD$('AT+CIPSTA?',100)
+390 IF NOT ('ip:' INSTR r$) THEN r$=ESPCMD$('AT+CIPSTA_CUR?',100)
+400 ip$=GETIP$(r$,'ip:',1)
+410 gw$=GETIP$(r$,'gateway:',1)
+420 nm$=GETIP$(r$,'netmask:',1)
+430 IF ip$='' THEN
+440   r$=ESPCMD$('AT+CIFSR',100)
+450   ip$=GETIP$(r$,'STAIP',1)
+460 END IF
+530 PRINT 'IP address : ';NZ$(ip$)
+540 PRINT 'Netmask    : ';NZ$(nm$)
+550 PRINT 'Gateway    : ';NZ$(gw$)
+580 CLOSE #3
+590 STOP
+600 REMark
+610 DEFine FuNction NZ$(a$)
+620   IF a$='' THEN RETurn 'n/a'
+630   RETurn a$
+640 END DEFine NZ$
+650 REMark
+660 REMark send command, read reply until OK, ERROR or FAIL
+670 REMark tmo = timeout per character in 1/50 second
+680 DEFine FuNction ESPCMD$(c$,tmo)
+690   LOCAL r$,ch$
+700   REPeat dr
+710     IF INKEY$(#3,0)='' THEN EXIT dr
+720   END REPeat dr
+730   PRINT #3;c$;CHR$(13);CHR$(10);
+740   r$=''
+750   REPeat rd
+760     ch$=INKEY$(#3,tmo)
+770     IF ch$='' THEN EXIT rd
+780     IF ch$<>CHR$(13) THEN r$=r$&ch$
+790     IF ch$=CHR$(10) THEN
+800       IF ('OK'&CHR$(10)) INSTR r$ THEN EXIT rd
+810       IF 'ERROR' INSTR r$ THEN EXIT rd
+820       IF 'FAIL' INSTR r$ THEN EXIT rd
+830     END IF
+840   END REPeat rd
+890   RETurn r$
+900 END DEFine ESPCMD$
+910 REMark
+920 REMark find n-th occurrence of k$ in r$, return the first
+930 REMark number made of digits and dots that follows it
+940 DEFine FuNction GETIP$(r$,k$,n)
+950   LOCAL p,q,j,i,o$,c$
+960   p=0
+970   FOR j=1 TO n
+980     IF p>=LEN(r$) THEN RETurn ''
+990     q=k$ INSTR r$(p+1 TO LEN(r$))
+1000    IF q=0 THEN RETurn ''
+1010    p=p+q+LEN(k$)-1
+1020  END FOR j
+1030  o$=''
+1040  FOR i=p+1 TO LEN(r$)
+1050    c$=r$(i)
+1060    IF c$ INSTR '0123456789.' THEN
+1070      o$=o$&c$
+1080    ELSE
+1090      IF o$<>'' THEN EXIT i
+1100    END IF
+1110  END FOR i
+1120  RETurn o$
+1130 END DEFine GETIP$
