@@ -1,5 +1,6 @@
 # Sinclair-QL-Dev
-Here you´ll find my own developments and contributions for the powerful Sinclair QL platform (BBQL, QLion, QL core). These are zipped binaries (to preserve the XTcc field) that you can download and unzip in QDOS.<p>
+Here you´ll find my own developments and contributions for the powerful Sinclair QL platform (BBQL, QLion, QL core).<p>
+These are zipped binaries (to preserve the XTcc field) that you can download and unzip in QDOS.<p>
 Syntax is shown if you run the binary without switches.
 
 <li>RAMTOP
