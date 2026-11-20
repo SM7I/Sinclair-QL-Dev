@@ -9,6 +9,8 @@ Syntax is shown if you run the binary without switches.<p>
 <li>NXTPQE
 <li>ESPIP_BAS
 <li>QLTransfer
+<li>QXLTOOL (Python)
+<li>QXLTOOL_GUI (PYTHON)
 <p><p>
   
 | Filename  | Description | Additional information | Year |
@@ -19,4 +21,4 @@ Syntax is shown if you run the binary without switches.<p>
 | NXTPQE | Clock synchronisation | Sync QL clock and RTC against NXTP server, such as 'time.nxtel.org'. Syntax: ew nxtpqe;'time.nxtel.org' *OR if boot-file*: 100 ew nxtpqe,#0;'time.nxtel.org' | 2026 |
 | ESPIP_BAS | Find IP information of ESP1 | SuperBasic program to find out IP information of ESP1, IP address, netmask and gateway. Syntax: lrun ESPIP_BAS | 2026 |
 | QLTransfer | PC -> QL filetransfer | Software suite to transfer files from PC (Windows or Linux) to QL. Manual included in ZIP file | 2026 |
-
+| QXLtool_Python.zip | QXL file editor | Platform independent Python script that allows for manipulating HDF images. Syntax: python qxltool_gui.py | 2026 |
