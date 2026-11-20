@@ -9,8 +9,7 @@ Syntax is shown if you run the binary without switches.<p>
 <li>NXTPQE
 <li>ESPIP_BAS
 <li>QLTransfer
-<li>QXLTOOL (Python)
-<li>QXLTOOL_GUI (PYTHON)
+<li>QXLtool (Python)
 <p><p>
   
 | Filename  | Description | Additional information | Year |
