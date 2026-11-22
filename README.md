@@ -10,6 +10,7 @@ Syntax is shown if you run the binary without switches.<p>
 <li>ESPIP_BAS
 <li>QLTransfer
 <li>QXLtool (python)
+<li>QLRepair (python)
 <p><p>
   
 | Filename  | Description | Additional information | Year |
@@ -21,3 +22,4 @@ Syntax is shown if you run the binary without switches.<p>
 | ESPIP_BAS | Find IP information of ESP1 | SuperBasic program to find out IP information of ESP1, IP address, netmask and gateway. Syntax: lrun ESPIP_BAS | 2026 |
 | QLTransfer | PC -> QL filetransfer | Software suite to transfer files from PC (Windows or Linux) to QL. Manual included in ZIP file | 2026 |
 | QXLtool_Python.zip | Manipulate QXL files | Platform independent Python script that allows for manipulating HDF images. Syntax: python qxltool_gui.py | 2026 |
+| QLRepair_Python.zip | Repair XTcc field and magic header | Platform independent Python script that allows for restoring of XTcc field and magic header for QL binaries that has been unpacked/handled on a Windows machine. Syntax: python qlrepair.py | 2026 |
